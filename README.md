@@ -5,14 +5,6 @@ Envi est un utilitaire pour gerer les variables d'environnement en shell, cshell
 
 
 ### Update history:
-Fri Nov 17 - 2017:
-   Improvement:
-    - add wiki access to envi from gui envi_commit and zlaunch
-    - history implemented in xenvi
-    - enviswitch
-   Problem found:
-    - check to load only one plugin. Fixable in config
-
 
 
 
