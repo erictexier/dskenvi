@@ -125,7 +125,7 @@ Pack:
         add_paths(env_var, [value1,value2], at_end=False)
         rm_path(env_var, value)
         add_function(function_name, core_function)
-        dir_platform()  # return for example on suse13.1    linux/opensuse-13.1
+        dir_platform()
 
 Config/Pack:
 
