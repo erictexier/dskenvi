@@ -1,0 +1,11 @@
+#This script needs to be run via source in order to have the Envi shell commands maintained
+#in the parent shell.
+#Add the following to your .bashrc in order to have it update your existing shell:
+#alias envi="source ${DSKENV}/bin/linux/envi_bsh"
+
+
+TFILE=`mktemp --suffix ".xenvi"`
+python ${DSKENV}/bin/dskenv_py bash "$@" > $TFILE
+source $TFILE
+rm -rf $TFILE
+

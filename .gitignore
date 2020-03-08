@@ -1,0 +1,7 @@
+/.project
+*.pyc
+.pydevproject
+.settings
+.DS_Store
+*.bak
+__pycache__

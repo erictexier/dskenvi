@@ -1,0 +1,9 @@
+#This script needs to be run via source in order to have the Envi shell commands maintained
+#in the parent shell.
+
+TFILE=`mktemp -t "envi."`
+python ${DSKENV}/bin/dskenv_py bash "$@" > $TFILE
+source $TFILE
+rm -rf $TFILE
+
+

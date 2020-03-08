@@ -1,0 +1,8 @@
+
+# warning if DSKENVPATH should be the same as DSK_ENV_PATH_KEY
+
+setenv DSKENVPATH $1
+setenv TFILE_DUXXXX `mktemp --suffix ".dumpenvi"`
+envi -L -d -w $TFILE_DUXXXX
+envi -Reset
+source $TFILE_DUXXXX

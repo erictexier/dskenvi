@@ -1,0 +1,12 @@
+
+if [ "$1" == "" ]; then
+    echo ERROR: enviswitchd needs an argument
+    return
+fi
+
+# warning if DSKENVPATH should be the same as DSK_ENV_PATH_KEY
+export DSKENVPATH=$1
+TFILE_DUXXXX=`mktemp --suffix ".dumpenvi"`
+envi -L -d -w $TFILE_DUXXXX
+envi -Reset
+source $TFILE_DUXXXX

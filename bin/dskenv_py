@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+"""Envi: Support for csh and bash script
+"""
+import sys
+import os
+local = os.path.dirname(__file__)
+local = os.path.join(os.path.dirname(local), 'python')
+sys.path.insert(0,local)
+
+import sys
+if __name__ == "__main__":
+    from dskenv.envi import Envi
+    if len(sys.argv) == 1:
+        sys.exit(0)
+    a = Envi()
+    if 'bash' in sys.argv:
+        # bash caller
+        index = sys.argv.index('bash')
+        sys.argv.pop(index)
+        a.set_bash()
+    if 'csh' in sys.argv:
+        # bash caller
+        index = sys.argv.index('csh')
+        sys.argv.pop(index)
+        a.set_csh()
+
+    a.execute(sys.argv,fromPython=False)

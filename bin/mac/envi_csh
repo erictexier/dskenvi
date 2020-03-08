@@ -1,0 +1,13 @@
+#This script needs to be run via source in order to have the Envi shell commands maintained
+#in the parent shell.
+
+#alias envi="source ${DSKENV}/bin/mac/envi_csh"
+
+
+setenv TFILE `mktemp --prefix "xenvi."`
+python $DSKENV}/bin/dskenv_py csh $* > $TFILE
+source $TFILE
+rm -rf $TFILE
+
+unsetenv $TFILE
+rehash
