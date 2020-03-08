@@ -16,7 +16,7 @@ Fri Nov 17 - 2017:
 
 
 
-### dependencies:  python2.7.*
+### dependencies:  python3.*.*
 
 
 ### install note envi code developer:
