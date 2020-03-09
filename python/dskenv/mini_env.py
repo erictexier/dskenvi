@@ -699,7 +699,7 @@ class MiniEnv(object):
             assert type(exceptionStartwith) == dict
 
         self._storeLocalEnv.clear()
-        if exceptionStartwith:
+        if exceptionStartwith is None:
             exceptionStartwith = dict()
         for i in os.environ:
             if not (i.startswith(BaseEnv._undoPackageKey) or

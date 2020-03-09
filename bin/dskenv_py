@@ -25,4 +25,4 @@ if __name__ == "__main__":
         sys.argv.pop(index)
         a.set_csh()
 
-    a.execute(sys.argv,fromPython=False)
+    a.execute(sys.argv, fromPython=False)
