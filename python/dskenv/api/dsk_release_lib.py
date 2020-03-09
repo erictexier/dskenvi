@@ -100,9 +100,7 @@ class DskReleaseLib(EnviApi):
 
     def __init__(self):
         super(DskReleaseLib, self).__init__()
-        self.mainrelease = ""
-        self.site = {}
-        self.repo_info = list()
+        self.reset()
 
     def reset(self, envplace=""):
         """ For testing only """
@@ -122,7 +120,6 @@ class DskReleaseLib(EnviApi):
 
     def load_data(self):
         data = super(DskReleaseLib, self).load_data()
-
         if 'default_install' in data:
             self.default_install = data['default_install']
         # make sure is a list
