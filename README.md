@@ -14,8 +14,8 @@ Envi est un utilitaire pour gerer les variables d'environnement en shell, cshell
 ### install note envi code developer:
 
 ```bash
-cd /u/beta/newEnv
-git clone git@git.envi.git
+cd ${HOME}/beta/newEnv
+git clone git@git.....envi.git
 ```
 
 ### install note envi user:
@@ -56,9 +56,9 @@ Envi().execute("-c showname")
 
 ### envi -h ###
 
-config in: /u/..../configs_and_packs/configs
+config in: ${HOME}/..../configs_and_packs/configs
 
-packs in: /u/..../configs_and_packs/packs
+packs in: ${HOME}/..../configs_and_packs/packs
 
 envi: dev dskenv
 
