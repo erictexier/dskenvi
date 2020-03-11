@@ -2,7 +2,7 @@
 import os
 import re
 from dskenv.envi_utils import EnviUtils
-
+import functools
 
 class VersionHelper(object):
     _parse = re.compile(r"(.*)-(\d+)\.*(\d*)$")
@@ -134,7 +134,8 @@ class VersionHelper(object):
         for f in allFile:
             verList.append(VersionHelper(os.path.split(f)[1]))
 
-        verList = sorted(verList, VersionHelper.compare_version)
+        verList = sorted(verList, key=functools.cmp_to_key(
+                                        VersionHelper.compare_version))
         return os.path.join(path, verList[-1].name + self._ext)
 
     def version_up(self):
