@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 
-DSK_MOUNTED_ROOT = 'mnt'
+DSK_MOUNTED_ROOT = 'opt/esn'
 DSK_DEV_AREA = 'dev'
 
 DSK_CONFIGURATION_FOLDER = 'dsk_configuration'
